@@ -4,12 +4,44 @@
     color: #fff;
 }
 /* font-family: 'Raleway', sans-serif; */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* -----------normalize------------ */
+p,
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+ul,
+ol {
+    padding-left: 0;
+    margin: 0;
+}
+button {
+    cursor: pointer;
+}
+img {
+    display: block;
+}
+/* --------------------------------------- */
+
+
+/* ---------------repeat styles------------------ */
 :root {
     --brand-color: #FF6C00;
     --blue-text-color: #9DA4BD;
     --dark-text-color: #303030;
     --paragraf-color: #555555;
     --bg-color: #F7F7F7;
+    --typical-margin: 20px;
 }
 .button {
     font-family: 'Open Sans', 'Tahoma', sans-serif;
@@ -47,9 +79,11 @@
     line-height: 1.7;
     letter-spacing: 0.02em;
 }
-/* header */
+/* ---------header------------ */
 .header {
-    background-color:#303030;
+    background-color:black;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .header-list .header-list-link {
     font-family: 'Open Sans', 'Tahoma', sans-serif;
@@ -74,22 +108,26 @@
     color: #fff;
     text-decoration: none;
 }
-/* hero */
-.hero {
+/* -----------------hero------------------- */
+.hero-content {
     background: url(../img/Sliderimg3.jpg);
-    height: 680px;
+    padding: 272px 0 206px 96px;
 }
 .hero .hero-over-title {
     color: rgba(157, 164, 189, 0.6);
+    margin-bottom: var(--typical-margin);
 }
 .hero .hero-title {
     font-family: 'Raleway';
     font-size: 72px;
     line-height: 1.18;
     letter-spacing: 0.05em;
+    margin-bottom: var(--typical-margin);
+    
 }
 .hero .hero-descr {
     color: var(--blue-text-color);
+    max-width: 400px;
 }
 .hero .hero-item-link {
     text-decoration: none;
@@ -102,37 +140,62 @@
 .hero .hero-item-link:hover {
     color: var(--brand-color);
 }
-/* about */
+/*---------------- about--------------------- */
+.about {
+    padding-top: 139px;
+    padding-bottom: 121px;
+}
 .about .about-over-title {
     color: var(--dark-text-color);
+    margin-bottom: var(--typical-margin);
 }
 .about .about-title {
     color: var(--dark-text-color);
+    margin-bottom: var(--typical-margin);
 }
 .about .about-first-descr {
     color: var(--paragraf-color);
+    margin-bottom: var(--typical-margin);
 }
 .about .about-second-descr {
     font-size: 14px;
     line-height: 1.85;
     letter-spacing: 0.02em;
     color: var(--paragraf-color);
+    margin-bottom: 40px;
 }
-/* price */
+/* --------------------price--------------- */
 .price {
     background: url(../img/Group6.jpg);
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+.price-list-first,
+.price-list-second {
+    padding: 30px 40px;
+}
+.price-item{
+    margin-bottom: var(--typical-margin);
+}
+.price-title {
+    margin-bottom: 44px;
 }
 .price .price-over-title {
     color: rgba(157, 164, 189, 0.6);
+    margin-bottom: var(--typical-margin);
 }
 .price .price-service {
     color: var(--blue-text-color);
 }
 .price .price-sum {
     color: var(--blue-text-color);
-    text-align: right;
+    
 }
-/* benefits */
+/*---------------- benefits---------------- */
+.benefits {
+    padding-top: 114px;
+    padding-bottom: 137px;
+}
 .benefits .benefits-span {
     font-weight: 700;
     font-size: 42px;
@@ -140,9 +203,12 @@
     text-align: center;
     letter-spacing: 0.05em;
     color: var(--dark-text-color);
+    margin-bottom: 6px;
+    display: block;
 }
 .benefits .benefits-over-title {
     color: var(--dark-text-color);
+    margin-bottom: var(--typical-margin);
 }
 .benefits .benefits-descr {
     font-weight: 600;
@@ -153,19 +219,31 @@
 }
 .benefits .benefits-title {
     color: var(--dark-text-color);
+    margin-bottom: var(--typical-margin);
 } 
 .benefits .benefits-text {
     color: var(--paragraf-color);
 }
-/* masters */
+.benefits-item {
+    width: 170px;
+    height: 130px;
+}
+/*---------------- masters------------------- */
 .masters {
     background-color: var(--bg-color);
+    padding-top: 130px;
+    padding-bottom: 130px;
 }
 .masters .masters-over-title {
     color: var(--dark-text-color);
+    margin-bottom: var(--typical-margin);
 }
 .masters .masters-title {
     color: var(--dark-text-color);
+    margin-bottom: 44px;
+}
+.masters-img {
+    margin-bottom: 30px;
 }
 .masters .masters-name {
     font-weight: 400;
@@ -174,6 +252,7 @@
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--dark-text-color);
+    margin-bottom: 8px;
 }
 .masters .masters-profession {
     font-size: 14px;
@@ -182,14 +261,19 @@
     letter-spacing: 0.02em;
     color: var(--brand-color);
 }
-/* gallery */
+/*------------------- gallery--------------- */
+.gallery {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
 .gallery .gallery-title {
     visibility: hidden;
 }
 .gallery .gallery-descr {
     color: var(--dark-text-color);
+    margin-bottom: 44px;
 }
-/* contacts */
+/*----------------- contacts------------------- */
 .contacts {
     background: url(../img/contacts-bg.jpg);
 }
@@ -228,6 +312,7 @@
     height: 2px;
     background-color: rgba(157, 164, 189, 0.4);
 }
+/* -------------footer------------------ */
 .footer .footer-copyright {
     color: var(--blue-text-color);
 }
