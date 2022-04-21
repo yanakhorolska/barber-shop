@@ -86,6 +86,11 @@ img {
   display: flex;
   align-items: center;
 }
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ---------header------------ */
 .header {
   position: absolute;
@@ -139,6 +144,15 @@ img {
 .hero .hero-over-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: var(--typical-margin);
+  display: flex;
+  align-items: center;
+}
+.hero-over-title::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+  margin-right: 20px;
 }
 .hero .hero-title {
   font-family: "Raleway";
@@ -149,6 +163,7 @@ img {
 }
 .hero-list {
   display: flex;
+  align-items: flex-start;
   align-self: flex-end;
   padding-top: 20px;
   padding-left: 40px;
@@ -162,16 +177,7 @@ img {
 .hero-content {
   flex-grow: 1;
 }
-.hero-insta::before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
-  width: 60px;
-  height: 1px;
-  background-color: var(--dark-text-color);
-  margin-right: 40px;
-}
+
 .hero .hero-descr {
   color: var(--blue-text-color);
   max-width: 400px;
@@ -202,16 +208,15 @@ img {
 .about .about-over-title {
   color: var(--dark-text-color);
   margin-bottom: var(--typical-margin);
+  display: flex;
+  align-items: center;
 }
 .about-over-title::before {
   content: "";
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
   width: 60px;
   height: 1px;
-  background-color: var(--dark-text-color);
-  margin-right: 5px;
+  background-color: currentColor;
+  margin-right: 20px;
 }
 .about-item + .about-item {
   margin-left: 30px;
@@ -245,21 +250,12 @@ img {
 .prices-lists {
   display: flex;
   margin-bottom: 50px;
-
   color: rgba(157, 164, 189, 100%);
 }
 .price-list-first,
 .price-list-second {
   padding: 30px 40px;
   flex-grow: 1;
-  /* background: linear-gradient(
-    to bottom,
-    rgba(9, 11, 9, 0.9) 11%,
-    rgba(9, 11, 9, 0.8) 21%,
-    rgba(9, 11, 9, 0.7) 30%,
-    rgba(9, 11, 9, 0.4) 60%,
-    rgba(9, 11, 9, 0.1) 100%
-  ); */
   background: linear-gradient(
     180deg,
     #090b13 0%,
@@ -273,7 +269,6 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .price-span {
-  display: block;
   flex-grow: 1;
   align-self: flex-end;
   margin-left: 10px;
@@ -295,16 +290,15 @@ img {
 .price .price-over-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: var(--typical-margin);
+  display: flex;
+  align-items: center;
 }
 .price .price-over-title::before {
   content: "";
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
   width: 60px;
   height: 1px;
-  background-color: var(--blue-text-color);
-  margin-right: 5px;
+  background-color: currentColor;
+  margin-right: 20px;
 }
 /* .price .price-service {
   color: var(--blue-text-color);
@@ -346,16 +340,31 @@ img {
   width: 10px;
   height: 2px;
   background: red;
-  top: 35px;
-  right: 45px;
 }
 .benefits-cross-second {
   transform: rotate(90deg);
+}
+.benefits-cross-short {
+  top: 35px;
+  right: 47px;
+}
+.benefits-cross-long {
+  top: 35px;
+  right: 35px;
 }
 
 .benefits .benefits-over-title {
   color: var(--dark-text-color);
   margin-bottom: var(--typical-margin);
+  display: flex;
+  align-items: center;
+}
+.benefits-over-title::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--dark-text-color);
+  margin-right: 20px;
 }
 .benefits .benefits-descr {
   font-weight: 600;
@@ -396,16 +405,15 @@ img {
 .masters .masters-over-title {
   color: var(--dark-text-color);
   margin-bottom: var(--typical-margin);
+  display: flex;
+  align-items: center;
 }
 .masters-over-title::before {
   content: "";
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
   width: 60px;
   height: 1px;
   background-color: var(--dark-text-color);
-  margin-right: 5px;
+  margin-right: 20px;
 }
 .masters .masters-title {
   color: var(--dark-text-color);
@@ -450,63 +458,101 @@ img {
 .gallery .gallery-descr {
   color: var(--dark-text-color);
   margin-bottom: 44px;
+  display: flex;
+  align-items: center;
 }
 .gallery-descr::before {
   content: "";
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
   width: 60px;
   height: 1px;
   background-color: var(--dark-text-color);
-  margin-right: 5px;
+  margin-right: 20px;
 }
 /*----------------- contacts------------------- */
+.channels {
+  background-image: url(../img/bg-foot.jpg);
+  max-width: 1280px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  padding: 130px 255px 120px 57px;
+}
+.online {
+  flex-grow: 1;
+}
 .contacts {
-  background: url(../img/contacts-bg.jpg);
+  flex-grow: 1;
+  padding-left: 140px;
+}
+.contacts-title {
+  margin-bottom: 40px;
+}
+.contacts-list {
+  margin-bottom: 70px;
 }
 .contacts .contacts-link {
-  position: relative;
   font-style: normal;
   text-decoration: none;
   color: var(--blue-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 .first-icon::before {
   content: url("../img/location.png");
-  position: absolute;
-  left: -35px;
-  top: 5px;
+  margin-right: 20px;
 }
 .second-icon::before {
   content: url("../img/Shape.png");
-  position: absolute;
-  left: -35px;
-  top: 3px;
+  margin-right: 20px;
 }
 .third-icon::before {
   content: url("../img/mail.png");
-  position: absolute;
-  left: -35px;
+  margin-right: 20px;
 }
 .contacts .contacts-time {
   color: var(--blue-text-color);
 }
+.contacts-work {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
 .contacts .contacts-work::before {
   content: "";
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
   width: 60px;
   height: 2px;
   background-color: rgba(157, 164, 189, 0.4);
+  margin-right: 20px;
 }
 /* -------------footer------------------ */
+.footer {
+  width: 100%;
+  height: 127px;
+  background-color: #f7f7f7;
+}
+.footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
 .footer .footer-copyright {
   color: var(--blue-text-color);
+}
+.footer-line {
+  width: 60px;
+  height: 1px;
+  background-color: var(--dark-text-color);
 }
 .footer .footer-link {
   color: var(--dark-text-color);
   text-decoration: none;
+}
+.footer-link:hover {
+  color: var(--brand-color);
 }
 .footer-copyright,
 .footer-link {
@@ -514,4 +560,7 @@ img {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+}
+.footer-item:not(:last-child) {
+  margin-right: 20px;
 }
